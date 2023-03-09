@@ -1,0 +1,23 @@
+{
+  "name": "connectionsfriends",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "aws-login": "aws ecr get-login-password --region <region> | docker login --username AWS --password-stdin <account_id>.dkr.ecr.<region>.amazonaws.com",
+    "build": "docker build -t connections-friends:latest .",
+    "push": "docker tag connections-friends:latest <account_id>.dkr.ecr.<region>.amazonaws.com/connections-friends:latest && docker push <account_id>.dkr.ecr.<region>.amazonaws.com/connections-friends",
+    "delete": "aws ecr batch-delete-image --repository-name connections-friends --image-ids imageTag=latest",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1215.0",
+    "uuid": "^9.0.0",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "jest": "^29.0.3"
+  }
+}
