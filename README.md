@@ -1,6 +1,15 @@
 
 Mude ``<account_id>`` e ``<region>`` para seus dados de conta
 
+## Ferramentas utilizadas:
+
+* CodeCommit
+* DynamoDB
+* ECR
+* Docker
+* Lambda
+* API-Gatway
+
 ********************************************************************
               PARA CRIAR A INFRAESTRUTURA
 ********************************************************************
